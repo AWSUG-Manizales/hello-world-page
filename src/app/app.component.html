@@ -1,0 +1,45 @@
+<main class="main">
+    <div class="content">
+        <div class="left-side">
+            <img src="header-image.jpeg" alt="">
+            <h1>Hello User Group Manizales </h1>
+
+            <div class="deployment-info">
+                This app was deployed using <span>{{ deploySource }} 🎉</span>
+            </div>
+
+            <div class="client-ip">
+                Client IP: {{ getSourceIp() }}
+            </div>
+
+        </div>
+        <div class="divider" role="separator" aria-label="Divider"></div>
+        <div class="right-side">
+            <div class="pill-group">
+                @for (item of [
+                    { title: 'Santiago Loaiza', icon: 'linkedin', link: 'https://www.linkedin.com/in/santiago-loaiza-giraldo-37b6b61a5/' },
+                    { title: 'Jimmy Loaiza', icon: 'linkedin', link: 'https://www.linkedin.com/in/jloaiza07/' },
+                    { title: 'Github', icon: 'github', link: 'https://github.com/loaizajimmy' },
+                    {
+                        title: 'User Group',
+                        icon: 'linkedin',
+                        link: 'https://www.linkedin.com/groups/12746171/'
+                    },
+                    { title: 'Meetup', icon: 'meetup', link: 'https://www.meetup.com/aws-user-group-manizales/' },
+                ]; track item.title) {
+                    <a
+                            class="pill"
+                            [href]="item.link"
+                            target="_blank"
+                            rel="noopener"
+                    >
+                        <span>{{ item.title }}</span>
+                        <fa-icon  size="lg" [icon]="getIcon(item.icon)"></fa-icon>
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</main>
+
+<router-outlet/>
