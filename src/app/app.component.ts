@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { environment } from "../environments/environment";
 import { FontAwesomeModule, IconDefinition } from "@fortawesome/angular-fontawesome";
-import { faCoffee, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faMeetup } from "@fortawesome/free-brands-svg-icons";
 
 @Component({
@@ -13,7 +13,7 @@ import { faGithub, faLinkedin, faMeetup } from "@fortawesome/free-brands-svg-ico
     styleUrl: './app.component.scss'
 })
 export class AppComponent {
-    title = 'app';
+    title = 'User Group';
     deploySource = environment.DEPLOYMENT_SOURCE;
 
 
